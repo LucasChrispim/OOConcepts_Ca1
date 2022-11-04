@@ -9,7 +9,7 @@ import ooc.enums.Month;
 
 /**
  *
- * @author gusta
+ * @author lucas,gusta
  */
 public class Car {
     int id;
