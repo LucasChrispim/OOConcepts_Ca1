@@ -1,7 +1,8 @@
 /*
  Gustavo 2021278
+ Lucas 2020301
 
-Gitpod link:
+Gitpod link:https://github.com/LucasChrispim/OOConcepts_Ca1
  */
 package rentacar;
 
