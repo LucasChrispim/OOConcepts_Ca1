@@ -8,7 +8,7 @@ import ooc.enums.Make;
 
 /**
  *
- * @author gusta
+ * @author gusta,lucas
  */
 public class RentACar {
     Car car;
