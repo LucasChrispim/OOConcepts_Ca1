@@ -4,47 +4,69 @@
  */
 package ooc.yoursolution;
 
+
+import java.util.ArrayList;
+import java.util.List;
 import ooc.enums.Make;
+import ooc.enums.Month;
 
 /**
  *
- * @author gusta,lucas
+ * @author Gustavo,Lucas
  */
-public class RentACar {
-    Car car;
+public class RentACar implements RentACarInterface{
+
     String name;
-    int NumberOfCars;
-
-    public int getNumberOfCars() {
-        return NumberOfCars;
+    List<CarInterface> cars;
+    
+    @Override
+    public List<CarInterface> getCars() {
+    throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    public void setNumberOfCars(int NumberOfCars) {
-        this.NumberOfCars = NumberOfCars;
+    @Override
+    public void setCars(List<CarInterface> cars) {
+        this.cars = cars;
     }
 
-    public Car getCar() {
-        return car;
-    }
-
-    public void setCar(Car car) {
-        this.car = car;
-    }
-
+    @Override
     public String getName() {
-        return name;
+        return this.name;
     }
 
+    @Override
     public void setName(String name) {
         this.name = name;
     }
-    
-    public void checkAvailability(String month, int day,Make make, int lenghtOfRent ){
-        return;
-    }
-    public void getCarAvailable(String month, int day,Make make, int lenghtOfRent ){
-        int id = this.car.getId();
-        return;
+
+    @Override
+    public boolean checkAvailability(Month month, int day, Make make, int lengthOfRent) {
+        return false;
     }
 
+    @Override
+    public int getCarAvailable(Month month, int day, Make make, int lengthOfRent) {
+        
+        for(CarInterface cars : cars){
+            
+        }        
+        
+        return 3;
+    }
+
+    @Override
+    public boolean bookCar(Month month, int day, Make make, int lengthOfRent) {
+        return true;
+    }
+
+    @Override
+    public int getNumberOfCars() {
+        int total = 0;
+        for(CarInterface car : cars){
+            
+            total+=car.getNumber();
+        }
+        return total ;
+    }
+    
 }
