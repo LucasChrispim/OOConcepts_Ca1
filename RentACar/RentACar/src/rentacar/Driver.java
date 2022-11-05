@@ -1,12 +1,8 @@
-/*
- Gustavo 2021278
- Lucas 2020301
 
-Gitpod link:https://github.com/LucasChrispim/OOConcepts_Ca1
- */
 package rentacar;
 
-// This line will give you an error until you create the needed class.
+
+import ooc.yoursolution.BookingSystem;
 
 import ooc.yoursolution.BookingSystemInterface;
 import ooc.yoursolution.RentACarInterface;
@@ -16,11 +12,13 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-// INCLUDE HERE THE LINK TO THE GIT REPOSITORY AS A COMMENT!!!!
+
+//https://github.com/LucasChrispim/OOConcepts_Ca1
 
 
-// INCLUDE HERE THE FULL NAME AND STUDENT NUMBER OF BOTH TEAM MEMBERS 
-// AS A COMMENT!!!!
+//Gustavo Silvino Lambert 2021278
+//Lucas Barros Chrispim 2020301 
+
 
 public class Driver {
 
@@ -31,18 +29,21 @@ public class Driver {
      */
     public static void main(String[] args) throws IOException {
 
-        BookingSystemInterface bookingSystem = new BookingSystem();
+        BookingSystemInterface bookingSystem = new BookingSystem();//OK
 
-        String file = "car_rentals.txt";
-        BufferedReader in = new BufferedReader(new FileReader(file));
+        String file = "car_rentals.txt"; //OK
+        BufferedReader in = new BufferedReader(new FileReader(file));//OK
 
-        RentACarInterface rentACar = bookingSystem.setupRentACar(in);
+        RentACarInterface rentACar = bookingSystem.setupRentACar(in);//OK
 
+        
+        System.out.println(rentACar);
+        
         // Get the name of the car rental
-        System.out.println(rentACar.getName());
+        System.out.println(rentACar.getName());//OK
         
         // Print the number of cars in the rent-a-car
-        System.out.println(rentACar.getNumberOfCars());  
+        System.out.println("We have a total of: " + rentACar.getNumberOfCars() + " Cars");  //OK
         
         // Check if there is a BMW car available for 5 days from the 1st
         // of January
