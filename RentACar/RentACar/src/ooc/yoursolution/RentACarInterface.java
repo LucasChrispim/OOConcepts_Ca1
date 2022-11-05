@@ -5,7 +5,7 @@ import ooc.enums.Month;
 import java.util.List;
 
 /**
- * This is one of the interfaces you need to implement
+ @author Gustavo,Lucas
  */
 public interface RentACarInterface {
 
