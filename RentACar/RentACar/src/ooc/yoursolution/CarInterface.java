@@ -1,15 +1,11 @@
-/*
- @author gusta,lucas
- */
+
 package ooc.yoursolution;
 
 import ooc.enums.Make;
 import ooc.enums.Month;
 import java.util.Map;
 
-/**
- * This is one of the interfaces you need to implement
- */
+
 public interface CarInterface {
     
     /**
@@ -28,6 +24,13 @@ public interface CarInterface {
      * @return the make of the car
      */
     public Make getMake();
+    
+    /**
+     * Getter method for the number of cars.
+     * 
+     * @return 
+     */
+    public int getNumber();
     
     /**
      * Sets the make of the car.
