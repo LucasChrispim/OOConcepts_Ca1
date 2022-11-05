@@ -9,8 +9,7 @@ import ooc.enums.Make;
 import ooc.enums.Month;
 
 /**
- *
- * @author danil
+ * @author Gustavo,Lucas
  */
 public class Car implements CarInterface{
     
