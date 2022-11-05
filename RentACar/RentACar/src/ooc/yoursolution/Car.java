@@ -4,85 +4,91 @@
  */
 package ooc.yoursolution;
 
-import java.util.ArrayList;
+import java.util.Map;
+import ooc.enums.Make;
 import ooc.enums.Month;
 
 /**
  *
- * @author lucas,gusta
+ * @author danil
  */
-public class Car {
-    int id;
-    double rate;
-    String make;
-    ArrayList<Month> calendarAvailability;
+public class Car implements CarInterface{
+    
+    public int id;
+    public double rate;
+    public Make make;
+    public int number; 
+    
+    public Car() {
+    }
 
-    public Car(int id, double rate, String make, ArrayList<Month> calendarAvailability) {
+    public Car(int id, double rate, Make make, int number) {
         this.id = id;
         this.rate = rate;
         this.make = make;
-        this.calendarAvailability = calendarAvailability;
+        this.number = number;
+    }
+    
+    public int getNumber() {
+        return number;
     }
 
-    public Car() {
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    @Override
+    public Map<Month, boolean[]> createAvailability() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-    /**
-     * return the id of the car
-     * @return 
-     */
-    public int getId() {
-        return id;
+
+    @Override
+    public Make getMake() {
+        return this.make;
     }
-    /**
-     * set the id of the car
-     * @param id 
-     */
-    public void setId(int id) {
-        this.id = id;
+
+    @Override
+    public void setMake(Make make) {
+        this.make = make;
     }
-    /**
-     * return the rate
-     * @return 
-     */
+
+    @Override
     public double getRate() {
         return rate;
     }
-    /**
-     * set the rate
-     * @param rate 
-     */
+
+    @Override
     public void setRate(double rate) {
         this.rate = rate;
     }
-    /**
-     * return make
-     * @return 
-     */
-    public String getMake() {
-        return make;
+
+    @Override
+    public Map<Month, boolean[]> getAvailability() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-    /**
-     * set make
-     * @param make 
-     */
-    public void setMake(String make) {
-        this.make = make;
+
+    @Override
+    public void setAvailability(Map<Month, boolean[]> availability) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-    /**
-     * return array list
-     * @return 
-     */
-    public ArrayList<Month> getCalendarAvailability() {
-        return calendarAvailability;
+
+    @Override
+    public int getId() {
+        return id;
     }
-    /**
-     * 
-     * @param calendarAvailability 
-     */
-    public void setCalendarAvailability(ArrayList<Month> calendarAvailability) {
-        this.calendarAvailability = calendarAvailability;
+
+    @Override
+    public boolean isAvailable(Month month, int day) {
+        if(this.number >= 1){
+            return true;
+        }else{
+            return false;
+        }
     }
-    
-    
+
+    @Override
+    public boolean book(Month month, int day) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
 }
