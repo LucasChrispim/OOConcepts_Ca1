@@ -14,8 +14,7 @@ import java.util.Scanner;
 import ooc.enums.Make;
 
 /**
- *
- * @author danil
+ * @author Gustavo,Lucas
  */
 public class BookingSystem implements BookingSystemInterface{
         
